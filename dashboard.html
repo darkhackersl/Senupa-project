@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR Gadgets Store - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Link to CSS file -->
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Welcome to MR Gadgets Store</h1>
+        <p id="userGreeting"></p>
+        <div class="content">
+            <h2>Your Dashboard</h2>
+            <p>This is where you can manage your gadgets and account settings.</p>
+            <button id="logoutButton">Logout</button>
+        </div>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js"></script>
+    
+    <!-- Link to your custom JavaScript file -->
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
