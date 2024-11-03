@@ -64,7 +64,15 @@ button:hover {
     background-color: #45a049;
 }
 
-
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f69936;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
 
 @media (max-width: 600px) {
     .product-list {
