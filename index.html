@@ -5,12 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MR Gadgets Store - Your One-Stop Tech Shop</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/img1.png" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <style>
+        /* Additional inline styles for immediate visual feedback */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #f39c12;
+            --accent-color: #e74c3c;
+            --background-light: #ecf0f1;
+            --text-light: #ffffff;
+            --text-dark: #2c3e50;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: var(--background-light);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #hero {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                            url('img/img1.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .featured-products {
+            background-color: white;
+            padding: 50px 0;
+        }
+
+        .about-us {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 50px 0;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 40px 0 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <div id="shopName"><a href="index.html"><b>MR</b>Gadgets</a></div>
+            <div id="shopName">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="MR Gadgets Logo" height="50">
+                    <span><b>MR</b>Gadgets</span>
+                </a>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#featured-products">Products</a></li>
@@ -18,7 +83,10 @@
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="loging.html">Login</a></li>
                     <li><a href="dashboard.html">Dashboard</a></li>
-                    <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                    <li><a href="cart.html">
+                        <img src="img/cart-icon.png" alt="Cart" height="20">
+                        <span id="cart-count">0</span>
+                    </a></li>
                 </ul>
             </nav>
         </div>
@@ -34,32 +102,82 @@
         <section id="featured-products">
             <h2>Featured Products</h2>
             <div class="product-list">
-                <!-- Product items will be dynamically loaded here -->
+                <div class="product-item">
+                    <img src="img/product1.jpg" alt="Smartphone">
+                    <h3>Latest Smartphone</h3>
+                    <p>$699.99</p>
+                    <button onclick="addToCart('product1')">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="img/product2.jpg" alt="Smartwatch">
+                    <h3>Smart Watch Pro</h3>
+                    <p>$299.99</p>
+                    <button onclick="addToCart('product2')">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="img/product3.jpg" alt="Wireless Earbuds">
+                    <h3>Wireless Earbuds</h3>
+                    <p>$159.99</p>
+                    <button onclick="addToCart('product3')">Add to Cart</button>
+                </div>
             </div>
         </section>
 
         <section id="about-us">
-            <h2>About MR Gadgets</h2>
-            <p>At MR Gadgets, we're passionate about bringing you the latest and greatest in technology. Our curated selection of gadgets is designed to enhance your daily life and keep you at the forefront of innovation.</p>
+            <div class="container">
+                <h2>About MR Gadgets</h2>
+                <div class="about-content">
+                    <img src="img/store-front.jpg" alt="Our Store" class="about-image">
+                    <div class="about-text">
+                        <p>At MR Gadgets, we're passionate about bringing you the latest and greatest in technology. Our curated selection of gadgets is designed to enhance your daily life and keep you at the forefront of innovation.</p>
+                        <div class="features">
+                            <div class="feature">
+                                <img src="img/quality-icon.png" alt="Quality">
+                                <h3>Premium Quality</h3>
+                            </div>
+                            <div class="feature">
+                                <img src="img/shipping-icon.png" alt="Shipping">
+                                <h3>Fast Shipping</h3>
+                            </div>
+                            <div class="feature">
+                                <img src="img/support-icon.png" alt="Support">
+                                <h3>24/7 Support</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form id="contactForm" action="https://formspree.io/f/xeoqavon" method="POST">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <img src="img/contact-image.jpg" alt="Contact Us">
+                        <div class="contact-details">
+                            <p><img src="img/location-icon.png" alt="Location"> 123 Tech Street, Digital City</p>
+                            <p><img src="img/phone-icon.png" alt="Phone"> +1 234 567 8900</p>
+                            <p><img src="img/email-icon.png" alt="Email"> info@mrgadgets.com</p>
+                        </div>
+                    </div>
+                    <form id="contactForm" action="https://formspree.io/f/xeoqavon" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit">Send Message</button>
-            </form>
+            </div>
         </section>
     </main>
 
@@ -68,43 +186,4 @@
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#featured-products">Products</a></li>
-                    <li><a href="#about-us">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Connect With Us</h3>
-                <div class="social-icons">
-                    <a href="#" class="social-icon">Facebook</a>
-                    <a href="#" class="social-icon">Twitter</a>
-                    <a href="#" class="social-icon">Instagram</a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3>Newsletter</h3>
-                <form id="newsletter-form">
-                    <input type="email" placeholder="Enter your email" required>
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2024 MR Gadgets Store. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Firebase SDKs -->
-    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-firestore.js"></script>
-    
-    <!-- Custom JavaScript -->
-    <script src="js/config.js"></script>
-    <script src="js/auth.js"></script>
-    <script src="js/products.js"></script>
-    <script src="js/cart.js"></script>
-    <script src="js/main.js"></script>
-</body>
-</html>
+                    <li><a href="#featured-products
