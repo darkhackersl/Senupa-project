@@ -6,6 +6,18 @@
     <title>MR Gadgets Store</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+       <!-- FOOTER -->
+    <div id="4"></div>
+    <script>
+        load("footer.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(4).innerHTML = req.responseText;
+        }
+    </script>
 <body>
     <header>
         <h1>MR Gadgets Store</h1>
@@ -73,9 +85,6 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 MR Gadgets Store</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
