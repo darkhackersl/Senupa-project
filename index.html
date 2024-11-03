@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR Gadgets Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>MR Gadgets Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <h3>Gadget 1</h3>
+                    <p>Description of Gadget 1.</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Gadget 2</h3>
+                    <p>Description of Gadget 2.</p>
+                    <button>Add to Cart</button>
+                </div>
+                <!-- Add more products as needed -->
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MR Gadgets Store</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
