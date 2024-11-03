@@ -29,18 +29,19 @@
 
         <section id="products">
             <h2>Our Products</h2>
-            <div class="product-list">
-                <div class="product-item">
-                    <img src="images/gadget1.jpg" alt="Gadget 1" class="product-image">
-                    <h3>Gadget 1</h3>
-                    <p>Description of Gadget 1.</p>
-                    <button>Add to Cart</button>
+           <div class="product-item">
+    <img src="${product.image}" alt="${product.name}">
+    <h3>${product.name}</h3>
+    <p>${product.price}</p>
+    <button onclick="cart.addItem({id: '${product.id}', name: '${product.name}', price: ${product.price}, image: '${product.image}'})">Add to Cart</button>
+</div>
                 </div>
-                <div class="product-item">
-                    <img src="images/gadget2.jpg" alt="Gadget 2" class="product-image">
-                    <h3>Gadget 2</h3>
-                    <p>Description of Gadget 2.</p>
-                    <button>Add to Cart</button>
+<div class="product-item">
+    <img src="img/img1.png" alt="${product.name}">
+    <h3>$Senupa</h3>
+    <p>RS.40000</p>
+    <button onclick="cart.addItem({id: '${product.id}', name: '${product.name}', price: ${product.price}, image: '${product.image}'})">Add to Cart</button>
+</div>
                 </div>
                 <div class="product-item">
                     <img src="img/img1.jpg" alt="Gadget 3" class="product-image" sizes="16x16">
