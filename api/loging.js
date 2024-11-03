@@ -18,16 +18,23 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
     const email = document.getElementById("username").value;
     const password = document.getElementById("password").value;
+    const loginMessage = document.getElementById("loginMessage");
 
-    // Sign in with Firebase
+    // Display loading message
+    loginMessage.textContent = "Logging in...";
+    loginMessage.style.color = "#333";
+
+    // Firebase Authentication for user login
     auth.signInWithEmailAndPassword(email, password)
         .then((userCredential) => {
             // Login successful
-            document.getElementById("loginMessage").textContent = "Login successful!";
+            loginMessage.textContent = "Login successful!";
+            loginMessage.style.color = "green";
             window.location.href = "dashboard.html";  // Redirect to dashboard
         })
         .catch((error) => {
             // Handle login errors
-            document.getElementById("loginMessage").textContent = error.message;
+            loginMessage.textContent = error.message;
+            loginMessage.style.color = "red";
         });
 });
