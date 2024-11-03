@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - MR Gadgets Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Your header content -->
+    </header>
+
+    <main>
+        <h1>Your Shopping Cart</h1>
+        <div id="cart-items"></div>
+        <div id="cart-summary">
+            <h2>Total: <span id="cart-total"></span></h2>
+            <button onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Your footer content -->
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize cart and update UI
+        document.addEventListener('DOMContentLoaded', () => {
+            cart.updateCartUI();
+        });
+
+        function checkout() {
+            // Implement checkout logic
+            alert('Checkout functionality coming soon!');
+        }
+    </script>
+</body>
+</html>
